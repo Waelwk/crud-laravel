@@ -45,7 +45,7 @@
               
             </td>
             <td>
-            {{ $epreuve->matiere->lib }}
+            {{ $epreuve->matieree->lib }}
               
             </td>
         </tr>

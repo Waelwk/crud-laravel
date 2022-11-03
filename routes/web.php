@@ -33,3 +33,5 @@ Route::get('/epreuve/id', [EpreuveController::class,'FIndById']);
 Route::get('/matiere/ad', [MatiereController::class,'store'])->name('matiere');
 Route::get('/matiere/id', [MatiereController::class,'FIndById']);
 
+Route::post('/matiere/Fm', [MatiereController::class,'UserForm']);
+Route::get('/matiere/Fmm', [MatiereController::class,'createUserForm']) ;
