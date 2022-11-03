@@ -47,6 +47,9 @@
             <td>
             {{ $epreuve->matieree->lib }}
               
+            </td> 
+            <td>
+                <td> hhf</td>
             </td>
         </tr>
         @endforeach
