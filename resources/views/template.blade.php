@@ -48,8 +48,8 @@
     
     <ul class="nav navbar-nav">
       <li class="active"><a href="/">Home</a></li>
-      <li><a href="{{route('matiere')}}">matiere</a></li>
-      <li><a href="{{route('epreuve')}}">epreuve</a></li>
+      <li><a href="MatiereN">matiere</a></li>
+      <li><a href="epreuve">epreuve</a></li>
 
     </ul>
 

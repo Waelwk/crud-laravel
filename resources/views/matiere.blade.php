@@ -36,6 +36,14 @@
             <td>
                {{$matiere->coef}}
             </td>
+            <td> 
+            <td>
+                <a href="{{route('MatiereN.edit',$matiere->id)}}" class="btn btn-primary">Edit</a>
+            </td>
+            <td>
+               
+            </td>
+            </td>
         </tr>
         @endforeach
     </tbody>

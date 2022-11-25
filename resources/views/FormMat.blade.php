@@ -1,37 +1,27 @@
 @extends('template')
-    @section('content')
-<div>
-<!-- Success message -->
-@if(Session::has('success'))
-        <div class="alert alert-success">
-            {{Session::get('success')}}
+@section('content')
+<div class="container" style="margin: 130px;border: 4px solid #0062cc;
+        border-radius: 10px;padding: 10px;top: 124px;position: absolute;">
+
+    <form method="post" action="/MatiereN/">
+        {{ csrf_field() }}
+        <h1 class="h3" style="text-align: center;">Ajouter Une Matiere</h1>
+        <div class="form-row">
+           
+            <div class="form-group col-md-2">
+                <label for="Lieu">Libelle</label>
+                <input type="text" name="lib" class="form-control" id="Lieu">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="Lieu">coefficient</label>
+                <input type="number" name="coef" class="form-control" id="Lieu">
+            </div>
+
         </div>
-        @endif
-<form action="{{ url('/matiere/Fm') }}" method="post">
-        @csrf
-        <div></div>
-        <label for="lib">Entrez la libelle : </label>
-        <input type="text" class="{{ $errors->has('lib') ? 'error' : '' }} "name="lib" id="lib" >
-        <!-- Error -->
-        @if ($errors->has(''))
-                <div class="error">
-                    {{ $errors->first('lib') }}
-                </div>
-                @endif
-            </div>
 
-        <label for="coef">Entrez le cof: </label>
-        <input type="text" name="coef" id="coef">
-        @if ($errors->has('coef'))
-                <div class="error">
-                    {{ $errors->first('coef') }}
-                </div>
-                @endif
-            </div>
-            <input type="submit" name="send" value="Submit" class="btn btn-dark btn-block">
-        </form>
+        <button type="submit" name="submit" class="btn btn-primary">Ajouter</button>
+
+    </form>
+
 </div>
-
-
-
-    @endsection
+</body>
