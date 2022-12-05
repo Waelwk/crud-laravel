@@ -39,19 +39,35 @@
 </head>
 
 <body>
+  
+  
 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">tp1</a>
-    </div>
+    
     
     <ul class="nav navbar-nav">
-      <li class="active"><a href="/">Home</a></li>
+      
       <li><a href="MatiereN">matiere</a></li>
       <li><a href="epreuve">epreuve</a></li>
-
     </ul>
+  
+     <ul class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3">
+     @if (Route::has('login'))
+               
+                    @auth
+                    <li  >   <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a> </li>
+                    @else
+                    <li>  <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a></li>
+
+                        @if (Route::has('register'))
+                        <li>   <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a></li>
+                        @endif
+                    @endauth
+              
+            @endif
+            </ul>
+
 
    
   </div>
